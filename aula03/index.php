@@ -14,8 +14,9 @@
             //$c1 -> ponta = "0.5";
             //$c1 -> carga = 99;
             //$c1 -> tampada = true;
-            $c1 -> rabiscar();
             $c1 -> destampar();
+            $c1 -> rabiscar();
+            
             print_r($c1);
         ?>
         </pre>
