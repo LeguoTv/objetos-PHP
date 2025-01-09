@@ -1,0 +1,111 @@
+atributos e metodos.
+
+Nome da class = conta do banco
+
+ATRIBUTOS.
++ numConta, #tipo, -dono, -saldo, -status.
+
+Metodos.
++abrirconta(), +fecharconta(), +depositar(), +sacar(), +pagarMensalidade()
+
+passo1 tipo da conta= conrrente ou popansa 
+passo 2 abrir conta = mudar status para truee ou false
+se abrir conta corrente ganha 50 se for poupanssa 150
+passo 3 = fechar conta
+passo 4 = depositar
+
+----------------------------
+classe ContaBanco{
+//Atributos
+publico numConta: Inteiro
+protegido tipo: Caractere
+privado dono: Caractere
+privado saldo: Real
+Privado status: Logico
+
+//Métodos
+publicos Metodo abrirConta(t:Caractere){
+	setTipo(t)
+	setStatus(verdadeiro)
+	se(t = "CC"){ então
+		saldo = 50
+	} senão se (t = "CP"){ então
+		saldo = 150
+	}
+    }
+publico Metodo fecharConta(){
+	se (saldo > 0){ então
+		Escreva("Conta com dinheiro")
+	} senão se (saldo < 0) { então
+		Escreva ("Conta em débito")
+	} senão {
+		setStatus(false)
+	      }
+    }
+publico Metodo depositar(v:Real){
+	se(status = verdadeiro){ então
+		setSaldo(getSaldo() + v)
+	} senão {
+		Escreva("Imposivel depositar")
+	     }
+     }
+publico Metodo sacar(v:Real){
+	se (status = verdadeiro){ então
+		se (saldo > v){ então
+			saldo = saldo - v
+			} senão {
+				Escreva ("Saldo insuficiente")
+				}
+	senão { Escreva ("Impossível sacar") }
+	}
+publico Metodo pagarMensal(){
+	var v: Real
+	se (tipo = "CC"){ então
+		v = 12 }
+	senão se (tipo = "CP"){ então
+		v= 20 }
+	se (status = verdadeiro){ então
+			se(saldo > v){ então
+				saldo = saldo - v }
+			senão{ Escreva("Saldo insuficiente") }
+	senão{
+		Escreva("Impossível pagar")
+		}
+	}
+FimClasse
+
+//Métodos Especiais
+publico Metodo Construtor(){
+	saldo = 0
+	status = falso
+}
+publico Metodo setNumConta(n:Inteiro){
+	numConta = n 
+}
+publico Metodo getNumConta(){
+	retorne numConta
+}
+publico Metodo setTipo(t:Caractere){
+	tipo = t
+}
+publico Metodo getTipo(){
+	retorne tipo
+}
+publico Metodo setDono(d:Caractere){
+	dono = d
+}
+publico Metodo getDono(){
+	retorne dono
+}
+publico Metodo setSaldo(s:Real){
+	saldo = s
+}
+publico Metodo getSaldo(){
+	retorne saldo
+}
+publico Metodo setStatos(s:statos){
+	statos = s
+}
+publico Metodo getStatos(){
+	retorne statos
+}

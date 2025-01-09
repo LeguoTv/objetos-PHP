@@ -14,10 +14,6 @@
              print_r($c1);
              print_r($c2);
 
-
-
-
-
             //$c1->setModelo("BIC"); // consegue modificar metodos privados
             //$c1->modelo = "BIC";
             //$c1->setPonta(0.5);
